@@ -1,0 +1,28 @@
+.header-main {
+  width: 100%;
+  height: 56px;
+  min-height: 56px;
+  background-color: var(--light-secondary);
+  color: var(--dark-primary);
+}
+
+.header-main .header-wrap {
+  display: flex;
+  align-items: center;
+  justify-content: space-between;
+  height: 100%;
+}
+
+.header-wrap .logo {
+  /* width: ; */
+  height: 100%;
+}
+.header-wrap .logo img,
+.header-wrap .logo svg {
+  display: block;
+  background-color: transparent;
+  width: 100%;
+  height: 100%;
+}
+.header-wrap .title {
+}

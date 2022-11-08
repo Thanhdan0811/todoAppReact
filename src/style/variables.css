@@ -1,0 +1,9 @@
+body {
+  --dark-primary: #112a46;
+  --light-secondary: #acc8e5;
+}
+
+body.dark {
+  --dark-primary: #acc8e5;
+  --light-secondary: #112a46;
+}
