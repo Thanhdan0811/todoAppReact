@@ -1,7 +1,8 @@
-import { TOGGLE_THEME } from "./constanst";
+import { ADD_TODO, TOGGLE_THEME } from "./constanst";
 
 export const initState = {
   theme: "Light",
+  todoList: [],
 };
 
 // action : type, payload
@@ -12,6 +13,9 @@ const reducer = (state, action) => {
   switch (type) {
     case TOGGLE_THEME:
       newState.theme = toggleTheme(newState.theme);
+      break;
+    case ADD_TODO:
+      newState.todoList = addTodoToList(newState.todoList, payload);
       break;
     default:
       break;
@@ -33,4 +37,9 @@ const toggleTheme = (currenttTheme) => {
   }
 
   return nextTheme;
+};
+
+const addTodoToList = (currentList, todo) => {
+  let newList = [...currentList, todo];
+  return newList;
 };

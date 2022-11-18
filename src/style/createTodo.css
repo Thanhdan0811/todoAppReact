@@ -1,0 +1,32 @@
+.create-todo {
+}
+.create-todo .todo-item {
+  display: flex;
+  /* align-items: flex-end; */
+  font-size: 16px;
+  margin-bottom: 8px;
+}
+.create-todo .todo-item .title {
+  flex-shrink: 0;
+  flex-basis: 10%;
+  min-width: max-content;
+  padding-right: 10px;
+  margin-top: auto;
+
+  font-weight: 600;
+  font-size: inherit;
+}
+.create-todo .todo-item .detail {
+  flex-grow: 1;
+  position: relative;
+}
+
+.create-todo .todo-item .detail input,
+.create-todo .todo-item .detail textarea {
+  border-bottom: 2px solid var(--light-secondary);
+}
+
+.create-todo .todo-item .detail textarea {
+  resize: none;
+  columns: 1;
+}

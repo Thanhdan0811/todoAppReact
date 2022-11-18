@@ -8,6 +8,8 @@ export default function Header() {
 
   const [state, dispatch] = useReducer(reducer, initState);
 
+  console.log("header", state);
+
   const handleClickChangeTheme = () => {
     setTheme(state == "Dark" ? "Light" : "Dark");
     dispatch({ type: TOGGLE_THEME, payload: null });

@@ -1,0 +1,8 @@
+.input-custom {
+  display: inline-block;
+  width: 100%;
+
+  color: var(--light-secondary);
+  font-size: inherit;
+  background-color: transparent;
+}
