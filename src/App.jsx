@@ -30,7 +30,7 @@ function App() {
         <div className="d-flex container">
           {state.todoList.length > 0 ? (
             <>
-              <TodoList todoList={state.todoList} onClickItem={handleClickItem} classes='list-wrap' />
+              <TodoList todoList={state.todoList} onClickItem={handleClickItem} classes='list-wrap'  currentTodo={state.selectedTodo}/>
               <TodoDetail  />
             </>
           ) : (

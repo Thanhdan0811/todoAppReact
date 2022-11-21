@@ -14,7 +14,11 @@ export default function CreateTodo() {
   const addTodo = () => {
     console.log(contextReducer.state);
     contextReducer.dispatch({ type: ADD_TODO, payload: { todoName, todoDetail } });
+    setTodoName('');
+    setTodoDetail('');
   };
+
+
 
   return (
     <>

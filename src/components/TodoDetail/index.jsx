@@ -2,7 +2,7 @@ import { useContext } from "react";
 import { contextMain } from "../../reducer";
 
 
-const TodoDetail = () => {
+const TodoDetail = ({}) => {
 
     const { reducer } = useContext(contextMain);
 

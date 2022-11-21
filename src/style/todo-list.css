@@ -24,3 +24,8 @@
     border-right: 1px solid var(--light-secondary);
     border-bottom: 1px solid var(--light-secondary);
 }
+
+.todo-list .todo-item.active {
+    background-color: var(--light-secondary);
+    color: var(--dark-primary);
+}
