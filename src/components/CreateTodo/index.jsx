@@ -1,18 +1,19 @@
-import React, { useReducer, useState } from "react";
-import { ADD_TODO, initState } from "../../reducer";
-import reducer from "../../reducer/reducer";
+import React, { useContext, useReducer, useState } from "react";
+import { ADD_TODO, contextMain, initState } from "../../reducer";
 import InputCustom from "../InputCustom";
 
 export default function CreateTodo() {
   const [todoName, setTodoName] = useState("");
   const [todoDetail, setTodoDetail] = useState("");
-  const [state, dispatch] = useReducer(reducer, initState);
 
-  console.log("createTOdo", state);
+  const {reducer : contextReducer} = useContext(contextMain);
+
+
+  console.log("createTOdo", contextReducer);
 
   const addTodo = () => {
-    console.log(state);
-    dispatch({ type: ADD_TODO, payload: { todoName, todoDetail } });
+    console.log(contextReducer.state);
+    contextReducer.dispatch({ type: ADD_TODO, payload: { todoName, todoDetail } });
   };
 
   return (

@@ -25,6 +25,23 @@ main {
   margin-right: auto;
 }
 
+/* width height */
+.w-full {
+  width: 100%;
+}
+/* display classes */
+
+.d-flex {
+  display: flex;
+}
+
+.flex-grow-1 {
+  flex-grow: 1;
+}
+
+
+/* text , spacing */
+
 .text-right {
   text-align: right;
 }

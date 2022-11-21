@@ -1,18 +1,17 @@
-import React, { useReducer, useState } from "react";
+import React, { memo, useContext, useReducer, useState } from "react";
+import { contextMain } from "../../reducer";
 import { TOGGLE_THEME } from "../../reducer/constanst";
-import reducer, { initState } from "../../reducer/reducer";
 import Logo from "../Logo/index";
 
 export default function Header() {
   const [theme, setTheme] = useState("Dark");
+  const { reducer: contextReducer } = useContext(contextMain);
 
-  const [state, dispatch] = useReducer(reducer, initState);
-
-  console.log("header", state);
+  console.log("header", contextReducer.state);
 
   const handleClickChangeTheme = () => {
-    setTheme(state == "Dark" ? "Light" : "Dark");
-    dispatch({ type: TOGGLE_THEME, payload: null });
+    setTheme(contextReducer.state == "Dark" ? "Light" : "Dark");
+    contextReducer.dispatch({ type: TOGGLE_THEME, payload: null });
   };
 
   return (
@@ -36,4 +35,4 @@ export default function Header() {
       </header>
     </>
   );
-}
+};
