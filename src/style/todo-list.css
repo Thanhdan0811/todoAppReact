@@ -1,0 +1,26 @@
+
+.todo-detail {
+
+}
+
+.list-wrap {
+    max-width: 200px;
+    flex-grow: 1;
+}
+
+.todo-list {
+
+}
+
+.todo-detail {
+    max-width: 70%;
+    flex-grow: 1;
+    padding: 0 10px;
+}
+
+.todo-list .todo-item {
+    cursor: pointer;
+    padding: 8px 10px;
+    border-right: 1px solid var(--light-secondary);
+    border-bottom: 1px solid var(--light-secondary);
+}
